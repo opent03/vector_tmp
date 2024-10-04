@@ -66,3 +66,5 @@ Error: connect ENOENT /run/user/12285/vscode-ipc-12955f69-d8d3-405d-b4d5-f911526
 [I 2024-10-03 20:41:48.216 ServerApp] 302 GET / (@172.17.15.237) 0.34ms
 [I 2024-10-03 20:41:48.222 JupyterNotebookApp] 302 GET /tree? (@172.17.15.237) 0.49ms
 [W 2024-10-03 20:41:48.228 ServerApp] 404 GET /nbextensions/jupyter-js-widgets/extension.js (@172.17.15.237) 0.86ms referer=None
+[I 2024-10-04 00:17:52.455 ServerApp] Starting buffering for 037573b2-6e90-4d44-bb7e-0a57c15e3552:472c5aeb-83c5-4634-a51c-7abe68234f24
+slurmstepd: error: *** JOB 13710289 ON gpu024 CANCELLED AT 2024-10-04T12:41:20 DUE TO TIME LIMIT ***
