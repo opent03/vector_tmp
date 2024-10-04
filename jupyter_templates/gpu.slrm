@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --job-name=jp_gpu
+#SBATCH -c 20
+#SBATCH -q normal 
+#SBATCH -p t4v1,t4v2,rtx6000,a40
+#SBATCH --time=16:00:00
+#SBATCH --gres=gpu:1
+#SBATCH --mem=128G
+#SBATCH --error=notebook.out
+
+source ~/.bashrc
+conda activate dis
+
+jupyter notebook --ip 0.0.0.0 --port 8372

@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --job-name=jp_cpu
+#SBATCH -c 32
+#SBATCH -q cpu_qos
+#SBATCH -p cpu
+#SBATCH --time=4-00:00:00
+#SBATCH --mem=128G
+#SBATCH --error=notebook.out
+
+source ~/.bashrc
+conda activate dis # edit this to the proper environment 
+
+jupyter notebook --ip 0.0.0.0 --port 8372
