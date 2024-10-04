@@ -1,0 +1,26 @@
+#!/bin/bash
+#SBATCH --job-name=name
+#SBATCH -c 16
+#SBATCH --qos=normal
+#SBATCH --partition=t4v1,t4v2,rtx6000,a40
+#SBATCH --gres=gpu:1
+#SBATCH --mem=32G
+#SBATCH --time=16:00:00
+
+#SBATCH --output=slurm_logs/name.out
+#SBATCH --error=slurm_logs/name.err
+#SBATCH --open-mode=append
+#SBATCH --signal=B:USR1@120
+
+term_handler() {
+    scontrol requeue "${SLURM_JOB_ID}"
+}
+
+trap term_handler SIGUSR1
+source ~/.bashrc
+conda activate dis
+which python
+
+python -u run.py &
+child="$!"
+wait "$child"
