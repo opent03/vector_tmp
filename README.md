@@ -14,3 +14,10 @@ To schedule jobs, sweep every ``.slrm`` file in ``slurm_scripts/`` and ``sbatch`
 
 ## Jupyter Notebook hosted on a node
 
+Edit node configurations in ``jupyter_templates/``. Then, from ``vector_tmp/``, ``sbatch`` them:
+
+```sbatch jupyter_templates/[cpu-gpu].slrm```
+
+Then, run ``tail -f notebook.out``, copy the line that says ``https://gpuXXX:8372/tree?token=XXXXX`` into "existing kernel" in the Jupyter file on your VSCode notebook.
+
+
