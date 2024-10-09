@@ -2,6 +2,15 @@
 
 A template to start all projects on Vector's HPC.
 
+
+## Run interactive jobs
+
+For an interactive session, run:
+
+```srun -q normal -p t4v1,t4v2,rtx6000,a40 -c 16 --gres=gpu:1 --mem=64G --time=16:00:00 --pty bash```
+
+and edit the ``srun`` config as will. Most importantly, the ``--pty bash`` flag needs to be at the end.
+
 ## ``SBATCH``-ing multiple jobs
 
 Generate ``.slrm`` files using ``sbatch_generator.ipynb`` by customizing the writing loops there.
