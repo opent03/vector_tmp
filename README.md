@@ -12,4 +12,5 @@ To schedule jobs, sweep every ``.slrm`` file in ``slurm_scripts/`` and ``sbatch`
 
 ```bash run.bash```
 
+## Jupyter Notebook hosted on a node
 
