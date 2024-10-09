@@ -2,7 +2,7 @@
 
 A template to start all projects on Vector's HPC.
 
-## Organization
+## ``SBATCH``-ing multiple jobs
 
 Generate ``.slrm`` files using ``sbatch_generator.ipynb`` by customizing the writing loops there.
 
